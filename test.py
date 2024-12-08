@@ -5,14 +5,15 @@ import random
 pygame.init()
 
 # Create the window and what it's size will be (by pixels)
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+#SCREEN_WIDTH = 800
+#SCREEN_HEIGHT = 600
+screen_width, screen_height = pygame.display.Info().current_w, pygame.display.Info().current_h
 
 
 circles = []
 rects = []
 
-screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+screen = pygame.display.set_mode((screen_width, screen_height), pygame.RESIZABLE)
 pygame.display.set_caption('First Game')
 
 BG_COLOR = pygame.Color('grey12')
