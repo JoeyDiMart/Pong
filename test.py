@@ -23,6 +23,8 @@ def get_random_color():
     b = random.randint(0, 255)
     return r, g, b
 
+clock = pygame.time.Clock()
+
 
 # --- Main Game Loop ---
 run = True
@@ -50,6 +52,7 @@ while run:
         pygame.draw.rect(screen, rect['color'], rect['position'], 2)
 
     pygame.display.flip()
+    clock.tick(60)
 
 
 
