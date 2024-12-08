@@ -11,7 +11,9 @@ pygame.init()
 # CONSTANTS
 SCREEN_WIDTH = 800
 SCREEN_HEIGHT = 600
+
 BG_COLOR = pygame.Color('grey12')
+
 LIGHT_GREY = (200, 200, 200)
 
 player_score = 0 # Initialize scores
