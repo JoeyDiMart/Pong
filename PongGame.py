@@ -31,7 +31,7 @@ pygame.display.set_caption('Pong')
 clock = pygame.time.Clock()
 
 ''' 
-DEFINE THE BALL AND PADDLES USING PYGAMES RECT OBJECTS
+DEFINE THE BALL AND PADDLES USING PYGAME'S RECT OBJECTS
 '''
 # Ball
 ball = pygame.Rect(SCREEN_WIDTH // 2 - 15, SCREEN_HEIGHT // 2 - 15, 30, 30)
