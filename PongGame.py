@@ -9,8 +9,9 @@ import sys
 pygame.init()
 
 # CONSTANTS
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+#SCREEN_WIDTH = 800
+#SCREEN_HEIGHT = 600
+SCREEN_WIDTH, SCREEN_HEIGHT = pygame.display.Info().current_w, pygame.display.Info().current_h - 100
 
 BG_COLOR = pygame.Color('grey12')
 
@@ -34,8 +35,8 @@ DEFINE THE BALL AND PADDLES USING PYGAMES RECT OBJECTS
 '''
 # Ball
 ball = pygame.Rect(SCREEN_WIDTH // 2 - 15, SCREEN_HEIGHT // 2 - 15, 30, 30)
-ball_speed_x = 7
-ball_speed_y = 7
+ball_speed_x = 9
+ball_speed_y = 9
 
 # Player Paddle
 player = pygame.Rect(SCREEN_WIDTH - 20, SCREEN_HEIGHT // 2 - 70, 10, 140)
@@ -43,7 +44,7 @@ player_speed = 0
 
 # Opponent Paddle
 opponent = pygame.Rect(10, SCREEN_HEIGHT // 2 - 70, 10, 140)
-opponent_speed = 7
+opponent_speed = 8
 
 '''
 GAME FUNCTIONS TO HANDLE BALL MOVEMENT - COLLISIONS - PADDLE MOVEMENT
@@ -138,14 +139,14 @@ while True:
             sys.exit()
         if event.type == pygame.KEYDOWN:
             if event.key == pygame.K_DOWN:
-                player_speed += 6
+                player_speed += 6.5
             if event.key == pygame.K_UP:
-                player_speed -= 6
+                player_speed -= 6.5
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_DOWN:
-                player_speed -= 6
+                player_speed -= 6.5
             if event.key == pygame.K_UP:
-                player_speed += 6
+                player_speed += 6.5
 
     # Game logic
     ball_animation()
